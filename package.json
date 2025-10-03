@@ -1,0 +1,16 @@
+{
+  "name": "recipe-microservices",
+  "version": "1.0.0",
+  "scripts": {
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "docker:ps": "docker-compose ps",
+    "dev:all": "concurrently \"npm run dev:gateway\" \"npm run dev:auth\" \"npm run dev:content\" \"npm run dev:interaction\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
